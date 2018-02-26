@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\Desktop\常木先生\DirectX9球体をぶつける5発展\DirectX9( Xファイル描画 )\program\bullet\CMakeFiles\af3730b24af1dfdb2c957570f4158c63\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{32C0C1AF-476D-33FE-8EBF-4482E2579DAD}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

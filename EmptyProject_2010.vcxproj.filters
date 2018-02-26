@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns:atg="http://atg.xbox.com" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{8e114980-c1a3-4ada-ad7c-83caadf5daeb}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="DXUT">
+      <UniqueIdentifier>{a43c5c25-0e86-4a20-b64a-883785ff74fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{2c3d4c8c-5d1a-459a-a05a-a4e4b608a44e}</UniqueIdentifier>
+      <Extensions>fx;fxh;hlsl</Extensions>
+    </Filter>
+    <Filter Include="program">
+      <UniqueIdentifier>{b15c8dac-7c81-4e27-8193-e5c06c6d6244}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="program\game">
+      <UniqueIdentifier>{4542b052-fbba-4776-ad50-0f67a225db4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="program\library">
+      <UniqueIdentifier>{1d0161ab-5306-40af-9f43-dca8a38bdde3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="program\engine">
+      <UniqueIdentifier>{c29861a9-18f1-457a-8aef-2c5f6d17fab4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="program\support">
+      <UniqueIdentifier>{712d0e0e-f35d-484b-b732-28671ebba2f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="program\engine\component">
+      <UniqueIdentifier>{72e10441-19c7-414d-b479-c9e67fd7b1d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="program\game\game_scenes">
+      <UniqueIdentifier>{2c433c27-490a-4568-a997-b09974606547}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="program\game\game_components">
+      <UniqueIdentifier>{335ea4a2-b7db-4bf8-8360-2491be02caa0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DXUT\Optional\directx.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <ClInclude Include="DXUT\Core\DXUT.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Core\DXUTenum.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Core\DXUTmisc.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClCompile Include="DXUT\Core\DXUT.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Core\DXUTenum.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Core\DXUTmisc.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClInclude Include="DXUT\Optional\DXUTcamera.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\DXUTgui.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\DXUTres.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\DXUTsettingsdlg.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\SDKmesh.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\SDKmisc.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClCompile Include="DXUT\Optional\DXUTcamera.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\DXUTgui.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\DXUTres.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\DXUTsettingsdlg.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\SDKmesh.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\SDKmisc.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="EmptyProject.cpp" />
+    <ClCompile Include="DXUT\Optional\SDKsound.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="DXUT\Optional\SDKwavefile.cpp">
+      <Filter>DXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="program\support\t2k_support.cpp">
+      <Filter>program\support</Filter>
+    </ClCompile>
+    <ClCompile Include="program\support\DebugTrace.cpp">
+      <Filter>program\support</Filter>
+    </ClCompile>
+    <ClCompile Include="program\library\lib_render_polygon.cpp">
+      <Filter>program\library</Filter>
+    </ClCompile>
+    <ClCompile Include="program\library\lib_texture.cpp">
+      <Filter>program\library</Filter>
+    </ClCompile>
+    <ClCompile Include="program\library\lib_camera.cpp">
+      <Filter>program\library</Filter>
+    </ClCompile>
+    <ClCompile Include="program\engine\engine_gameobject.cpp">
+      <Filter>program\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="program\engine\engine_physics.cpp">
+      <Filter>program\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="program\library\vector3.cpp">
+      <Filter>program\library</Filter>
+    </ClCompile>
+    <ClCompile Include="program\engine\component\sphere_collider.cpp">
+      <Filter>program\engine\component</Filter>
+    </ClCompile>
+    <ClCompile Include="program\engine\component\collider.cpp">
+      <Filter>program\engine\component</Filter>
+    </ClCompile>
+    <ClCompile Include="program\game\game_scenes\scene_stage1.cpp">
+      <Filter>program\game\game_scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="program\game\game_components\player_move.cpp">
+      <Filter>program\game\game_components</Filter>
+    </ClCompile>
+    <ClCompile Include="program\engine\engine_component.cpp">
+      <Filter>program\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="program\engine\engine_monobehaviour.cpp">
+      <Filter>program\engine</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DXUT\Optional\SDKsound.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="DXUT\Optional\SDKwavefile.h">
+      <Filter>DXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="program\library\lib_camera.h">
+      <Filter>program\library</Filter>
+    </ClInclude>
+    <ClInclude Include="program\library\lib_DXUTusage.h">
+      <Filter>program\library</Filter>
+    </ClInclude>
+    <ClInclude Include="program\library\lib_render_polygon.h">
+      <Filter>program\library</Filter>
+    </ClInclude>
+    <ClInclude Include="program\support\t2k_sound.h">
+      <Filter>program\support</Filter>
+    </ClInclude>
+    <ClInclude Include="program\support\t2k_support.h">
+      <Filter>program\support</Filter>
+    </ClInclude>
+    <ClInclude Include="program\support\DebugTrace.h">
+      <Filter>program\support</Filter>
+    </ClInclude>
+    <ClInclude Include="EmptyProject.h" />
+    <ClInclude Include="program\library\lib_utility.h">
+      <Filter>program\library</Filter>
+    </ClInclude>
+    <ClInclude Include="program\library\lib_texture.h">
+      <Filter>program\library</Filter>
+    </ClInclude>
+    <ClInclude Include="program\engine\engine_component.h">
+      <Filter>program\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="program\engine\engine_transform.h">
+      <Filter>program\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="program\engine\engine_gameobject.h">
+      <Filter>program\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="program\engine\component\mesh_renderer.h">
+      <Filter>program\engine\component</Filter>
+    </ClInclude>
+    <ClInclude Include="program\engine\engine_scene.h">
+      <Filter>program\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="program\engine\engine.h">
+      <Filter>program\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="program\engine\project.h">
+      <Filter>program\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="program\engine\engine_physics.h">
+      <Filter>program\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="program\engine\component\sphere_collider.h">
+      <Filter>program\engine\component</Filter>
+    </ClInclude>
+    <ClInclude Include="program\engine\component\rigidbody.h">
+      <Filter>program\engine\component</Filter>
+    </ClInclude>
+    <ClInclude Include="program\engine\component\box_collider.h">
+      <Filter>program\engine\component</Filter>
+    </ClInclude>
+    <ClInclude Include="program\engine\bullet_usage.h">
+      <Filter>program\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="program\library\vector3.h">
+      <Filter>program\library</Filter>
+    </ClInclude>
+    <ClInclude Include="program\engine\component\collider.h">
+      <Filter>program\engine\component</Filter>
+    </ClInclude>
+    <ClInclude Include="program\game\game_scenes\scene_stage1.h">
+      <Filter>program\game\game_scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="program\game\game_components\player_move.h">
+      <Filter>program\game\game_components</Filter>
+    </ClInclude>
+    <ClInclude Include="program\engine\SoulEngine.h">
+      <Filter>program\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="program\engine\engine_monobehaviour.h">
+      <Filter>program\engine</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CLInclude Include="resource.h">
+      <Filter>Resource Files</Filter>
+    </CLInclude>
+    <ResourceCompile Include="EmptyProject.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

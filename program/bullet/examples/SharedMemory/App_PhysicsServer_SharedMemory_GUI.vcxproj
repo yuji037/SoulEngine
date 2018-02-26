@@ -1,0 +1,476 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{375998B2-134F-3039-83D3-923451FF2EA4}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>App_PhysicsServer_SharedMemory_GUI</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Desktop\常木先生\DirectX9球体をぶつける5発展\DirectX9( Xファイル描画 )\program\bullet\examples\SharedMemory\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">App_PhysicsServer_SharedMemory_GUI.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">App_PhysicsServer_SharedMemory_GUI</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Desktop\常木先生\DirectX9球体をぶつける5発展\DirectX9( Xファイル描画 )\program\bullet\examples\SharedMemory\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">App_PhysicsServer_SharedMemory_GUI.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">App_PhysicsServer_SharedMemory_GUI</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\Desktop\常木先生\DirectX9球体をぶつける5発展\DirectX9( Xファイル描画 )\program\bullet\examples\SharedMemory\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">App_PhysicsServer_SharedMemory_GUI.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">App_PhysicsServer_SharedMemory_GUI</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\Desktop\常木先生\DirectX9球体をぶつける5発展\DirectX9( Xファイル描画 )\program\bullet\examples\SharedMemory\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">App_PhysicsServer_SharedMemory_GUI.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">App_PhysicsServer_SharedMemory_GUI</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\src;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\Glew;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\openvr\headers;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\openvr\samples\shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4244;4267</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <StringPooling>true</StringPooling>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_DEBUG;USE_GRAPHICAL_BENCHMARK;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;B3_USE_STANDALONE_EXAMPLE;GLEW_STATIC;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;USE_GRAPHICAL_BENCHMARK;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;B3_USE_STANDALONE_EXAMPLE;GLEW_STATIC;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\src;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\Glew;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\openvr\headers;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\openvr\samples\shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\src;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\Glew;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\openvr\headers;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\openvr\samples\shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\lib\Debug\Bullet3Common_Debug.lib;..\..\lib\Debug\BulletWorldImporter_Debug.lib;..\..\lib\Debug\BulletFileLoader_Debug.lib;..\..\lib\Debug\BulletInverseDynamicsUtils_Debug.lib;..\..\lib\Debug\BulletInverseDynamics_Debug.lib;..\..\lib\Debug\BulletDynamics_Debug.lib;..\..\lib\Debug\BulletCollision_Debug.lib;..\..\lib\Debug\LinearMath_Debug.lib;..\..\lib\Debug\BussIK_Debug.lib;..\..\lib\Debug\Bullet3Common_Debug.lib;..\..\lib\Debug\BulletWorldImporter_Debug.lib;..\..\lib\Debug\BulletInverseDynamicsUtils_Debug.lib;..\..\lib\Debug\BulletInverseDynamics_Debug.lib;..\..\lib\Debug\BulletDynamics_Debug.lib;..\..\lib\Debug\BulletCollision_Debug.lib;..\..\lib\Debug\LinearMath_Debug.lib;..\..\lib\Debug\BussIK_Debug.lib;..\..\lib\Debug\OpenGLWindow_Debug.lib;opengl32.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Desktop/常木先生/DirectX9球体をぶつける5発展/DirectX9( Xファイル描画 )/program/bullet/examples/SharedMemory/Debug/App_PhysicsServer_SharedMemory_GUI.lib</ImportLibrary>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ProgramDataBaseFile>D:/Desktop/常木先生/DirectX9球体をぶつける5発展/DirectX9( Xファイル描画 )/program/bullet/examples/SharedMemory/Debug/App_PhysicsServer_SharedMemory_GUI.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\src;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\Glew;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\openvr\headers;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\openvr\samples\shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4244;4267</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <StringPooling>true</StringPooling>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;USE_GRAPHICAL_BENCHMARK;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;B3_USE_STANDALONE_EXAMPLE;GLEW_STATIC;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;USE_GRAPHICAL_BENCHMARK;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;B3_USE_STANDALONE_EXAMPLE;GLEW_STATIC;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\src;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\Glew;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\openvr\headers;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\openvr\samples\shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\src;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\Glew;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\openvr\headers;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\openvr\samples\shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\lib\Release\Bullet3Common.lib;..\..\lib\Release\BulletWorldImporter.lib;..\..\lib\Release\BulletFileLoader.lib;..\..\lib\Release\BulletInverseDynamicsUtils.lib;..\..\lib\Release\BulletInverseDynamics.lib;..\..\lib\Release\BulletDynamics.lib;..\..\lib\Release\BulletCollision.lib;..\..\lib\Release\LinearMath.lib;..\..\lib\Release\BussIK.lib;..\..\lib\Release\Bullet3Common.lib;..\..\lib\Release\BulletWorldImporter.lib;..\..\lib\Release\BulletInverseDynamicsUtils.lib;..\..\lib\Release\BulletInverseDynamics.lib;..\..\lib\Release\BulletDynamics.lib;..\..\lib\Release\BulletCollision.lib;..\..\lib\Release\LinearMath.lib;..\..\lib\Release\BussIK.lib;..\..\lib\Release\OpenGLWindow.lib;opengl32.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Desktop/常木先生/DirectX9球体をぶつける5発展/DirectX9( Xファイル描画 )/program/bullet/examples/SharedMemory/Release/App_PhysicsServer_SharedMemory_GUI.lib</ImportLibrary>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ProgramDataBaseFile>D:/Desktop/常木先生/DirectX9球体をぶつける5発展/DirectX9( Xファイル描画 )/program/bullet/examples/SharedMemory/Release/App_PhysicsServer_SharedMemory_GUI.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\src;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\Glew;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\openvr\headers;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\openvr\samples\shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4244;4267</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <StringPooling>true</StringPooling>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;USE_GRAPHICAL_BENCHMARK;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;B3_USE_STANDALONE_EXAMPLE;GLEW_STATIC;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;USE_GRAPHICAL_BENCHMARK;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;B3_USE_STANDALONE_EXAMPLE;GLEW_STATIC;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\src;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\Glew;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\openvr\headers;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\openvr\samples\shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\src;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\Glew;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\openvr\headers;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\openvr\samples\shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\lib\MinSizeRel\Bullet3Common_MinsizeRel.lib;..\..\lib\MinSizeRel\BulletWorldImporter_MinsizeRel.lib;..\..\lib\MinSizeRel\BulletFileLoader_MinsizeRel.lib;..\..\lib\MinSizeRel\BulletInverseDynamicsUtils_MinsizeRel.lib;..\..\lib\MinSizeRel\BulletInverseDynamics_MinsizeRel.lib;..\..\lib\MinSizeRel\BulletDynamics_MinsizeRel.lib;..\..\lib\MinSizeRel\BulletCollision_MinsizeRel.lib;..\..\lib\MinSizeRel\LinearMath_MinsizeRel.lib;..\..\lib\MinSizeRel\BussIK_MinsizeRel.lib;..\..\lib\MinSizeRel\Bullet3Common_MinsizeRel.lib;..\..\lib\MinSizeRel\BulletWorldImporter_MinsizeRel.lib;..\..\lib\MinSizeRel\BulletInverseDynamicsUtils_MinsizeRel.lib;..\..\lib\MinSizeRel\BulletInverseDynamics_MinsizeRel.lib;..\..\lib\MinSizeRel\BulletDynamics_MinsizeRel.lib;..\..\lib\MinSizeRel\BulletCollision_MinsizeRel.lib;..\..\lib\MinSizeRel\LinearMath_MinsizeRel.lib;..\..\lib\MinSizeRel\BussIK_MinsizeRel.lib;..\..\lib\MinSizeRel\OpenGLWindow_MinsizeRel.lib;opengl32.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Desktop/常木先生/DirectX9球体をぶつける5発展/DirectX9( Xファイル描画 )/program/bullet/examples/SharedMemory/MinSizeRel/App_PhysicsServer_SharedMemory_GUI.lib</ImportLibrary>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ProgramDataBaseFile>D:/Desktop/常木先生/DirectX9球体をぶつける5発展/DirectX9( Xファイル描画 )/program/bullet/examples/SharedMemory/MinSizeRel/App_PhysicsServer_SharedMemory_GUI.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\src;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\Glew;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\openvr\headers;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\openvr\samples\shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4244;4267</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <StringPooling>true</StringPooling>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;USE_GRAPHICAL_BENCHMARK;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;B3_USE_STANDALONE_EXAMPLE;GLEW_STATIC;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;USE_GRAPHICAL_BENCHMARK;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;B3_USE_STANDALONE_EXAMPLE;GLEW_STATIC;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\src;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\Glew;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\openvr\headers;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\openvr\samples\shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\src;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\Glew;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\openvr\headers;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\openvr\samples\shared;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\..\lib\RelWithDebInfo\Bullet3Common_RelWithDebugInfo.lib;..\..\lib\RelWithDebInfo\BulletWorldImporter_RelWithDebugInfo.lib;..\..\lib\RelWithDebInfo\BulletFileLoader_RelWithDebugInfo.lib;..\..\lib\RelWithDebInfo\BulletInverseDynamicsUtils_RelWithDebugInfo.lib;..\..\lib\RelWithDebInfo\BulletInverseDynamics_RelWithDebugInfo.lib;..\..\lib\RelWithDebInfo\BulletDynamics_RelWithDebugInfo.lib;..\..\lib\RelWithDebInfo\BulletCollision_RelWithDebugInfo.lib;..\..\lib\RelWithDebInfo\LinearMath_RelWithDebugInfo.lib;..\..\lib\RelWithDebInfo\BussIK_RelWithDebugInfo.lib;..\..\lib\RelWithDebInfo\Bullet3Common_RelWithDebugInfo.lib;..\..\lib\RelWithDebInfo\BulletWorldImporter_RelWithDebugInfo.lib;..\..\lib\RelWithDebInfo\BulletInverseDynamicsUtils_RelWithDebugInfo.lib;..\..\lib\RelWithDebInfo\BulletInverseDynamics_RelWithDebugInfo.lib;..\..\lib\RelWithDebInfo\BulletDynamics_RelWithDebugInfo.lib;..\..\lib\RelWithDebInfo\BulletCollision_RelWithDebugInfo.lib;..\..\lib\RelWithDebInfo\LinearMath_RelWithDebugInfo.lib;..\..\lib\RelWithDebInfo\BussIK_RelWithDebugInfo.lib;..\..\lib\RelWithDebInfo\OpenGLWindow_RelWithDebugInfo.lib;opengl32.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Desktop/常木先生/DirectX9球体をぶつける5発展/DirectX9( Xファイル描画 )/program/bullet/examples/SharedMemory/RelWithDebInfo/App_PhysicsServer_SharedMemory_GUI.lib</ImportLibrary>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ProgramDataBaseFile>D:/Desktop/常木先生/DirectX9球体をぶつける5発展/DirectX9( Xファイル描画 )/program/bullet/examples/SharedMemory/RelWithDebInfo/App_PhysicsServer_SharedMemory_GUI.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/Desktop/ツール各種/PhisicsEngine/bullet3-2.87/bullet3-2.87/examples/SharedMemory/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+D:\Desktop\ツール各種\PhisicsEngine\cmake-3.10.2-win64-x64\cmake-3.10.2-win64-x64\bin\cmake.exe -HD:/Desktop/ツール各種/PhisicsEngine/bullet3-2.87/bullet3-2.87 "-BD:/Desktop/常木先生/DirectX9球体をぶつける5発展/DirectX9( Xファイル描画 )/program/bullet" --check-stamp-file "D:/Desktop/常木先生/DirectX9球体をぶつける5発展/DirectX9( Xファイル描画 )/program/bullet/examples/SharedMemory/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/Desktop/ツール各種/PhisicsEngine/bullet3-2.87/bullet3-2.87/examples/SharedMemory/CMakeLists.txt;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\CMakeLists.txt;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Desktop\常木先生\DirectX9球体をぶつける5発展\DirectX9( Xファイル描画 )\program\bullet\examples\SharedMemory\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/Desktop/ツール各種/PhisicsEngine/bullet3-2.87/bullet3-2.87/examples/SharedMemory/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+D:\Desktop\ツール各種\PhisicsEngine\cmake-3.10.2-win64-x64\cmake-3.10.2-win64-x64\bin\cmake.exe -HD:/Desktop/ツール各種/PhisicsEngine/bullet3-2.87/bullet3-2.87 "-BD:/Desktop/常木先生/DirectX9球体をぶつける5発展/DirectX9( Xファイル描画 )/program/bullet" --check-stamp-file "D:/Desktop/常木先生/DirectX9球体をぶつける5発展/DirectX9( Xファイル描画 )/program/bullet/examples/SharedMemory/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/Desktop/ツール各種/PhisicsEngine/bullet3-2.87/bullet3-2.87/examples/SharedMemory/CMakeLists.txt;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\CMakeLists.txt;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Desktop\常木先生\DirectX9球体をぶつける5発展\DirectX9( Xファイル描画 )\program\bullet\examples\SharedMemory\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule D:/Desktop/ツール各種/PhisicsEngine/bullet3-2.87/bullet3-2.87/examples/SharedMemory/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+D:\Desktop\ツール各種\PhisicsEngine\cmake-3.10.2-win64-x64\cmake-3.10.2-win64-x64\bin\cmake.exe -HD:/Desktop/ツール各種/PhisicsEngine/bullet3-2.87/bullet3-2.87 "-BD:/Desktop/常木先生/DirectX9球体をぶつける5発展/DirectX9( Xファイル描画 )/program/bullet" --check-stamp-file "D:/Desktop/常木先生/DirectX9球体をぶつける5発展/DirectX9( Xファイル描画 )/program/bullet/examples/SharedMemory/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/Desktop/ツール各種/PhisicsEngine/bullet3-2.87/bullet3-2.87/examples/SharedMemory/CMakeLists.txt;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\CMakeLists.txt;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\Desktop\常木先生\DirectX9球体をぶつける5発展\DirectX9( Xファイル描画 )\program\bullet\examples\SharedMemory\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule D:/Desktop/ツール各種/PhisicsEngine/bullet3-2.87/bullet3-2.87/examples/SharedMemory/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+D:\Desktop\ツール各種\PhisicsEngine\cmake-3.10.2-win64-x64\cmake-3.10.2-win64-x64\bin\cmake.exe -HD:/Desktop/ツール各種/PhisicsEngine/bullet3-2.87/bullet3-2.87 "-BD:/Desktop/常木先生/DirectX9球体をぶつける5発展/DirectX9( Xファイル描画 )/program/bullet" --check-stamp-file "D:/Desktop/常木先生/DirectX9球体をぶつける5発展/DirectX9( Xファイル描画 )/program/bullet/examples/SharedMemory/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/Desktop/ツール各種/PhisicsEngine/bullet3-2.87/bullet3-2.87/examples/SharedMemory/CMakeLists.txt;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\CMakeLists.txt;D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\Desktop\常木先生\DirectX9球体をぶつける5発展\DirectX9( Xファイル描画 )\program\bullet\examples\SharedMemory\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\IKTrajectoryHelper.cpp"  />
+    <ClInclude Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\IKTrajectoryHelper.h" />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\PhysicsClient.cpp"  />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\PhysicsClientSharedMemory.cpp"  />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\PhysicsClientExample.cpp"  />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\PhysicsServerExample.cpp"  />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\PhysicsServerExampleBullet2.cpp"  />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\PhysicsServerSharedMemory.cpp"  />
+    <ClInclude Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\PhysicsServerSharedMemory.h" />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\PhysicsServer.cpp"  />
+    <ClInclude Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\PhysicsServer.h" />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\PhysicsClientC_API.cpp"  />
+    <ClInclude Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\SharedMemoryCommands.h" />
+    <ClInclude Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\SharedMemoryPublic.h" />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\PosixSharedMemory.cpp"  />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\Win32SharedMemory.cpp"  />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\InProcessMemory.cpp"  />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\PhysicsDirect.cpp"  />
+    <ClInclude Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\PhysicsDirect.h" />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\PhysicsDirectC_API.cpp"  />
+    <ClInclude Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\PhysicsDirectC_API.h" />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\PhysicsLoopBack.cpp"  />
+    <ClInclude Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\PhysicsLoopBack.h" />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\PhysicsLoopBackC_API.cpp"  />
+    <ClInclude Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\PhysicsLoopBackC_API.h" />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\PhysicsClientSharedMemory_C_API.cpp"  />
+    <ClInclude Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\PhysicsClientSharedMemory_C_API.h" />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\PhysicsClientSharedMemory2_C_API.cpp"  />
+    <ClInclude Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\PhysicsClientSharedMemory2_C_API.h" />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\PhysicsClientSharedMemory2.cpp"  />
+    <ClInclude Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\PhysicsClientSharedMemory2.h" />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\SharedMemoryCommandProcessor.cpp"  />
+    <ClInclude Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\SharedMemoryCommandProcessor.h" />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\PhysicsServerCommandProcessor.cpp"  />
+    <ClInclude Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\PhysicsServerCommandProcessor.h" />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\TinyRendererVisualShapeConverter.cpp"  />
+    <ClInclude Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\TinyRendererVisualShapeConverter.h" />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\SharedMemory\b3PluginManager.cpp"  />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\TinyRenderer\geometry.cpp"  />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\TinyRenderer\model.cpp"  />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\TinyRenderer\tgaimage.cpp"  />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\TinyRenderer\our_gl.cpp"  />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\TinyRenderer\TinyRenderer.cpp"  />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\OpenGLWindow\SimpleCamera.cpp"  />
+    <ClInclude Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\OpenGLWindow\SimpleCamera.h" />
+    <ClInclude Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\Importers\ImportURDFDemo\ConvertRigidBodies2MultiBody.h" />
+    <ClInclude Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\Importers\ImportURDFDemo\MultiBodyCreationInterface.h" />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\Importers\ImportURDFDemo\MyMultiBodyCreator.cpp"  />
+    <ClInclude Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\Importers\ImportURDFDemo\MyMultiBodyCreator.h" />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\Importers\ImportURDFDemo\BulletUrdfImporter.cpp"  />
+    <ClInclude Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\Importers\ImportURDFDemo\BulletUrdfImporter.h" />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\Importers\ImportURDFDemo\UrdfParser.cpp"  />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\Importers\ImportURDFDemo\urdfStringSplit.cpp"  />
+    <ClInclude Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\Importers\ImportURDFDemo\UrdfParser.h" />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\Importers\ImportURDFDemo\URDF2Bullet.cpp"  />
+    <ClInclude Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\Importers\ImportURDFDemo\URDF2Bullet.h" />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\Importers\ImportMJCFDemo\BulletMJCFImporter.cpp"  />
+    <ClInclude Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\Importers\ImportMJCFDemo\BulletMJCFImporter.h" />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\Utils\b3ResourcePath.cpp"  />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\Utils\b3Clock.cpp"  />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\Utils\RobotLoggingUtil.cpp"  />
+    <ClInclude Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\Utils\RobotLoggingUtil.h" />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\Utils\ChromeTraceUtil.cpp"  />
+    <ClInclude Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\Utils\ChromeTraceUtil.h" />
+    <ClInclude Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\Importers\ImportURDFDemo\URDFImporterInterface.h" />
+    <ClInclude Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\Importers\ImportURDFDemo\URDFJointTypes.h" />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\Importers\ImportObjDemo\Wavefront2GLInstanceGraphicsShape.cpp"  />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\Importers\ImportObjDemo\LoadMeshFromObj.cpp"  />
+    <ClInclude Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\Importers\ImportSTLDemo\ImportSTLSetup.h" />
+    <ClInclude Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\Importers\ImportSTLDemo\LoadMeshFromSTL.h" />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\Importers\ImportColladaDemo\LoadMeshFromCollada.cpp"  />
+    <ClInclude Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\Importers\ImportColladaDemo\ColladaGraphicsInstance.h" />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\Wavefront\tiny_obj_loader.cpp"  />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\tinyxml\tinystr.cpp"  />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\tinyxml\tinyxml.cpp"  />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\tinyxml\tinyxmlerror.cpp"  />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\tinyxml\tinyxmlparser.cpp"  />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\Importers\ImportMeshUtility\b3ImportMeshUtility.cpp"  />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ThirdPartyLibs\stb_image\stb_image.cpp"  />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\MultiThreading\b3ThreadSupportInterface.cpp"  />
+    <ClInclude Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\MultiThreading\b3ThreadSupportInterface.h" />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\StandaloneMain\main_opengl_single_example.cpp"  />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ExampleBrowser\OpenGLGuiHelper.cpp"  />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ExampleBrowser\GL_ShapeDrawer.cpp"  />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\ExampleBrowser\CollisionShape2TriangleMesh.cpp"  />
+    <ClCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\MultiThreading\b3Win32ThreadSupport.cpp"  />
+    <ClInclude Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\examples\MultiThreading\b3Win32ThreadSupport.h" />
+    <ResourceCompile Include="D:\Desktop\ツール各種\PhisicsEngine\bullet3-2.87\bullet3-2.87\build3\bullet.rc"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\Desktop\常木先生\DirectX9球体をぶつける5発展\DirectX9( Xファイル描画 )\program\bullet\ZERO_CHECK.vcxproj">
+      <Project>{98112C79-E241-38A9-B4EA-C096D7AB5476}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Desktop\常木先生\DirectX9球体をぶつける5発展\DirectX9( Xファイル描画 )\program\bullet\src\Bullet3Common\Bullet3Common.vcxproj">
+      <Project>{B30FA693-8C50-3E39-8629-EB73D140A443}</Project>
+      <Name>Bullet3Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Desktop\常木先生\DirectX9球体をぶつける5発展\DirectX9( Xファイル描画 )\program\bullet\src\BulletCollision\BulletCollision.vcxproj">
+      <Project>{04E6B17D-FA87-3C4A-8101-63141FA14451}</Project>
+      <Name>BulletCollision</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Desktop\常木先生\DirectX9球体をぶつける5発展\DirectX9( Xファイル描画 )\program\bullet\src\BulletDynamics\BulletDynamics.vcxproj">
+      <Project>{1E6CB0B3-9DEE-3376-83DB-9F695DDF5ADE}</Project>
+      <Name>BulletDynamics</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Desktop\常木先生\DirectX9球体をぶつける5発展\DirectX9( Xファイル描画 )\program\bullet\Extras\Serialize\BulletFileLoader\BulletFileLoader.vcxproj">
+      <Project>{46D4EE31-8F04-330A-967A-88D6822BEB81}</Project>
+      <Name>BulletFileLoader</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Desktop\常木先生\DirectX9球体をぶつける5発展\DirectX9( Xファイル描画 )\program\bullet\src\BulletInverseDynamics\BulletInverseDynamics.vcxproj">
+      <Project>{A8CF9998-157D-39B8-B639-A5FA383A5ADD}</Project>
+      <Name>BulletInverseDynamics</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Desktop\常木先生\DirectX9球体をぶつける5発展\DirectX9( Xファイル描画 )\program\bullet\Extras\InverseDynamics\BulletInverseDynamicsUtils.vcxproj">
+      <Project>{E3504DE4-97A5-3DF0-B488-E2B5FD2AC77D}</Project>
+      <Name>BulletInverseDynamicsUtils</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Desktop\常木先生\DirectX9球体をぶつける5発展\DirectX9( Xファイル描画 )\program\bullet\Extras\Serialize\BulletWorldImporter\BulletWorldImporter.vcxproj">
+      <Project>{8F327255-5A6A-3C90-9B69-DFBE8FEA9015}</Project>
+      <Name>BulletWorldImporter</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Desktop\常木先生\DirectX9球体をぶつける5発展\DirectX9( Xファイル描画 )\program\bullet\examples\ThirdPartyLibs\BussIK\BussIK.vcxproj">
+      <Project>{3E20FED5-B148-3F18-864C-1D4DE2DC2ED4}</Project>
+      <Name>BussIK</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Desktop\常木先生\DirectX9球体をぶつける5発展\DirectX9( Xファイル描画 )\program\bullet\src\LinearMath\LinearMath.vcxproj">
+      <Project>{709E3B58-071A-36B4-8E3B-B9AE3FD84E07}</Project>
+      <Name>LinearMath</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Desktop\常木先生\DirectX9球体をぶつける5発展\DirectX9( Xファイル描画 )\program\bullet\examples\OpenGLWindow\OpenGLWindow.vcxproj">
+      <Project>{DE3876D6-A833-3E92-97AD-797A6EDB0050}</Project>
+      <Name>OpenGLWindow</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
