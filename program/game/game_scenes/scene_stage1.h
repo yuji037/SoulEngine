@@ -6,13 +6,13 @@
 class Stage1 : public Scene {
 public:
 
-	static const int kPolygonCount = 0;
+	static const int sphereCount = 0;
 
 	//GameObjectSP player;
 	//GameObjectSP plane;
 
 
-	Texture		gpTexture[2];			// テクスチャ
+	Texture		gpTexture[6];			// テクスチャ
 
 	bool init = false;
 

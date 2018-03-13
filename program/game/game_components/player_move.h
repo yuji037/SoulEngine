@@ -1,4 +1,5 @@
 #pragma once
+#include "../../engine/SoulEngine.h"
 
 #include "../../engine/engine_monobehaviour.h"
 
@@ -7,15 +8,15 @@ public:
 
 	PlayerMove(GameObjectWP _gameObject)
 		: MonoBehaviour(_gameObject)
-		{}
+	{}
 
 
 	Vector3 rotV;
 	Vector3 contactPoint;
-	Vector3 fixedCameraTarget;
-	Vector3 camOffset;
 	Texture		gpTexture[2];
 	bool jumped;
+
+	float spawnTime;
 
 	void Start()override;
 	void Update()override;

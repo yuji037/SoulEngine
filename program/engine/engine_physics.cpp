@@ -1,8 +1,10 @@
 #include "DXUT.h"
 #include "engine_physics.h"
+#include "BulletCollision\CollisionDispatch\btGhostObject.h"
+
 //#include <stdio.h>
 
-Physics::Physics() {
+Bullet::Bullet() {
 	// バレットエンジンの初期化
 	///collision configuration contains default setup for memory, collision setup. Advanced users can create their own configuration.
 	collisionConfiguration = new btDefaultCollisionConfiguration();
@@ -19,9 +21,12 @@ Physics::Physics() {
 	dynamicsWorld = new btDiscreteDynamicsWorld(dispatcher, overlappingPairCache, solver, collisionConfiguration);
 
 	dynamicsWorld->setGravity(btVector3(0, -9.8f, 0));
+
+	ghostPairCallback = new btGhostPairCallback();
+	dynamicsWorld->getPairCache()->setInternalGhostPairCallback(ghostPairCallback);
 }
 
-Physics::~Physics() {
+Bullet::~Bullet() {
 	//cleanup in the reverse order of creation/initialization
 
 	///-----cleanup_start-----
@@ -66,27 +71,48 @@ Physics::~Physics() {
 	collisionShapes.clear();
 
 	colliders.clear();
+
+	delete ghostPairCallback;
 }
 
-void Physics::Init() {
-	for (auto it = colliders.begin(); it != colliders.end(); ++it) {
-		(*it)->ColliderUpdate();
-	}
+void Bullet::RemoveCollider(Collider* collider) {
+	colliders.remove(collider);
+
+	btRigidBody* body = collider->body;
+	//if (body && body->getMotionState())
+	//{
+	//	delete body->getMotionState();
+	//}
+	dynamicsWorld->removeCollisionObject(body);
+	dynamicsWorld->removeAction(collider);
+	dynamicsWorld->removeCollisionObject(collider->ghost);
+	delete body;
+	delete collider->ghost;
 }
 
-void Physics::Update() {
-	for (auto it = colliders.begin(); it != colliders.end(); ++it) {
-		(*it)->ColliderUpdate();
-	}
+void Bullet::Init() {
+	//for (auto it = colliders.begin(); it != colliders.end(); ++it) {
+	//	(*it)->ColliderUpdate();
+	//}
+}
+
+void Bullet::Update() {
+
+	//for (auto it = colliders.begin(); it != colliders.end(); ++it) {
+	//	// 当たり判定の方の位置を修正
+	//	(*it)->ColliderUpdate();
+	//}
 	dynamicsWorld->stepSimulation(1.f / 60.f, 10);
 
-	//for (int i = 0; i < collisionShapes.size(); ++i) {
-	//	collisionShapes[i].
+	//for (auto it = colliders.begin(); it != colliders.end(); ++it) {
+	//	// エンジン側positionの修正
+	//	(*it)->TransformUpdate();
 	//}
+}
 
-	//print positions of all objects
-	int num_collision_objects = dynamicsWorld->getNumCollisionObjects();
+void Bullet::Draw() {
 
+	t2k::Support::renderString(10, 30, "Collision数：%d", dynamicsWorld->getNumCollisionObjects());
 	for (int j = dynamicsWorld->getNumCollisionObjects() - 1; j >= 0; j--)
 	{
 		btCollisionObject* obj = dynamicsWorld->getCollisionObjectArray()[j];
@@ -95,17 +121,11 @@ void Physics::Update() {
 		if (body && body->getMotionState())
 		{
 			body->getMotionState()->getWorldTransform(trans);
-			//body->setAngularVelocity(btVector3(20,0,0));
 		}
 		else
 		{
 			trans = obj->getWorldTransform();
 		}
-		//printf("world pos object %d = %f,%f,%f\n", j, float(trans.getOrigin().getX()), float(trans.getOrigin().getY()), float(trans.getOrigin().getZ()));
-		//t2k::Support::renderString(10, 30, "world pos object %d = %f,%f,%f\n", j, float(trans.getOrigin().getX()), float(trans.getOrigin().getY()), float(trans.getOrigin().getZ()));
-	}
-
-	for (auto it = colliders.begin(); it != colliders.end(); ++it) {
-		(*it)->TransformUpdate();
+		//t2k::Support::renderString(10, j * 15, "world pos object %d = %f,%f,%f\n", j, float(trans.getOrigin().getX()), float(trans.getOrigin().getY()), float(trans.getOrigin().getZ()));
 	}
 }

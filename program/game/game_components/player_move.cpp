@@ -1,16 +1,16 @@
 #include "DXUT.h"
-#include "../../engine/SoulEngine.h"
 #include "../../library/lib_DXUTusage.h"
 #include "player_move.h"
+#include "character_action.h"
 
 void PlayerMove::Start() {
 	contactPoint = Vector3(0, 0, 0);
-	fixedCameraTarget = Vector3(0, 0, 0);
-	camOffset = Vector3(0, 5, -20);
 	// テクスチャのロード
-	gpTexture[0] = LoadTexture("mandragora.jpg");
-	gpTexture[1] = LoadTexture("Ground_1.1_s.jpg");
+	gpTexture[0] = LoadTexture("Resources/Image/water.bmp");
+	gpTexture[1] = LoadTexture("Resources/Image/tile.bmp");
 	jumped = false;
+
+	spawnTime = 0;
 }
 
 void PlayerMove::Update() {
@@ -26,60 +26,78 @@ void PlayerMove::Update() {
 	migi = s2j::vec3Cross(vecCameraToPlayer, ue);
 	mae = s2j::vec3Cross(migi, ue);
 
-	if (DXUTIsKeyDown('W')) {
+	if (IsKeyDown('W')) {
 		rotV.z = -rot;
 	}
-	if (DXUTIsKeyDown('A')) {
+	if (IsKeyDown('A')) {
 		rotV.x = -rot;
 	}
-	if (DXUTIsKeyDown('S')) {
+	if (IsKeyDown('S')) {
 		rotV.z = rot;
 	}
-	if (DXUTIsKeyDown('D')) {
+	if (IsKeyDown('D')) {
 		rotV.x = rot;
 	}
-
-	float rotSpeed = 400;
-	rotV = (mae * rotV.x + migi * rotV.z);
+	
+	float rotSpeed = 10;
+	rotV = (mae * rotV.z - migi * rotV.x);
 	rotV *= rotSpeed;
 
-	btRigidBody* body = GetComponent<SphereCollider>()->body;
-	btVector3 angVel = body->getAngularVelocity();
-	body->setAngularVelocity(angVel* 0.99f);
+	btRigidBody* body = GetComponent<Collider>()->body;
+	btGhostObject* ghost = GetComponent<Collider>()->ghost;
+	//btGhostObject* ghost = GetComponent<Collider>()->ghost;
+	body->setDamping(0.f, 0.5f);
+	body->setFriction(1.f);
+	//btVector3 angVel = body->getAngularVelocity();
+	
+	//body->setAngularVelocity(angVel* 0.99f);
 
-	body->applyTorque((btVector3)rotV);
+	//body->applyTorque((btVector3)rotV);
+	body->activate(true);
+	//ghost->activate(true);
+	//body->applyForce((btVector3)rotV, body->getWorldTransform().getOrigin());
+	//transform.lock()->position += rotV;
+	body->translate((btVector3)rotV);
 
-	if (DXUTIsKeyDown(' ')) {
+	// ふくらむ
+	//transform.lock()->scale += Vector3(0.003f, 0.003f, 0.003f);
+
+	if (IsKeyDown(' ')) {
 		if (!jumped) {
-			//jumped = true;
-			GameObjectSP sphere = GameObject::CreatePrimitive(PrimitiveType::Sphere);
-			sphere->transform->position = Vector3(10, 3, 10);
-			sphere->transform->scale = Vector3(1, 1, 1);
-
-			MeshRenderer* meshren = sphere->GetComponent<MeshRenderer>();
-			meshren->mesh->texture = gpTexture[0];
-
-
-			//body->applyForce(btVector3(0, 200, 0), body->getWorldTransform().getOrigin());
+			jumped = true;
+			body->applyForce(btVector3(0, 500, 0), body->getWorldTransform().getOrigin());
 		}
 	}
 	else{
 		jumped = false;
 	}
 
+	// 復帰用
+	if (transform.lock()->position.y < -10) {
+		body->translate(Vector3(0, 10, 0) - transform.lock()->position);
+		body->setLinearVelocity(Vector3(0, 0, 0));
+	}
 
-	fixedCameraTarget = transform.lock()->position;
-	Vector3 distance = fixedCameraTarget - Camera::main.lock()->m_tgt;
-	// 線形補間倍率を掛ける
-	distance *= 0.1f;
+	spawnTime += GameTime::deltaTime;
+	if (spawnTime > 2) {
+		spawnTime = 0;
+		
+		// 敵スフィアの生成
+		GameObjectSP sphere = GameObject::CreatePrimitive(PrimitiveType::Sphere);
+		sphere->transform->position = Vector3(rand()% 48 - 24, 50, rand() % 48 - 24);
+		sphere->transform->scale = Vector3(1, 1, 1);
 
-	D3DXVECTOR3 _camOffset = camOffset;
-	Matrix rotMCam;
-	D3DXMatrixRotationAxis(&rotMCam, &D3DXVECTOR3(0, 1, 0), rot);
-	D3DXVec3TransformCoord(&_camOffset, &_camOffset, &rotMCam);
-	camOffset = D3DXVec3ToVec3(_camOffset);
+		MeshRenderer* meshren = sphere->GetComponent<MeshRenderer>();
+		meshren->mesh->texture = gpTexture[0];
 
-	// カメラのターゲットを遷移移動
-	Camera::main.lock()->m_tgt += distance;
-	Camera::main.lock()->m_pos = Camera::main.lock()->m_tgt + camOffset;
+		sphere->AddComponent<AutoDestroy>()->destroyTime = 40;
+		sphere->AddComponent<CharacterAction>();
+	}
+
+	//auto pos = body->getWorldTransform().getOrigin();
+	//t2k::Support::debugTrace("body  : %.2f,%.2f,%.2f"
+	//	, pos.getX(), pos.getY(), pos.getZ());
+	//pos = ghost->getWorldTransform().getOrigin();
+	//t2k::Support::debugTrace("ghost : %.2f,%.2f,%.2f"
+	//	, pos.getX(), pos.getY(), pos.getZ());
 }

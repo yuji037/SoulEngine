@@ -36,6 +36,12 @@
     <Filter Include="program\game\game_components">
       <UniqueIdentifier>{335ea4a2-b7db-4bf8-8360-2491be02caa0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="program\engine\component\collider">
+      <UniqueIdentifier>{242b7737-b4c2-4409-bc92-8851fdabbe08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="program\engine\component\utility">
+      <UniqueIdentifier>{da7cdd88-9b05-4e69-a2e3-7945ab76e84e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -128,12 +134,6 @@
     <ClCompile Include="program\library\vector3.cpp">
       <Filter>program\library</Filter>
     </ClCompile>
-    <ClCompile Include="program\engine\component\sphere_collider.cpp">
-      <Filter>program\engine\component</Filter>
-    </ClCompile>
-    <ClCompile Include="program\engine\component\collider.cpp">
-      <Filter>program\engine\component</Filter>
-    </ClCompile>
     <ClCompile Include="program\game\game_scenes\scene_stage1.cpp">
       <Filter>program\game\game_scenes</Filter>
     </ClCompile>
@@ -145,6 +145,27 @@
     </ClCompile>
     <ClCompile Include="program\engine\engine_monobehaviour.cpp">
       <Filter>program\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="program\game\game_components\camera_move.cpp">
+      <Filter>program\game\game_components</Filter>
+    </ClCompile>
+    <ClCompile Include="program\game\game_components\sword_move.cpp">
+      <Filter>program\game\game_components</Filter>
+    </ClCompile>
+    <ClCompile Include="program\library\lib_time.cpp">
+      <Filter>program\library</Filter>
+    </ClCompile>
+    <ClCompile Include="program\engine\component\auto_destroy.cpp">
+      <Filter>program\engine\component\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="program\engine\component\collider.cpp">
+      <Filter>program\engine\component\collider</Filter>
+    </ClCompile>
+    <ClCompile Include="program\engine\component\mesh_renderer.cpp">
+      <Filter>program\engine\component</Filter>
+    </ClCompile>
+    <ClCompile Include="program\engine\component\image.cpp">
+      <Filter>program\engine\component</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -203,13 +224,7 @@
     <ClInclude Include="program\engine\engine_physics.h">
       <Filter>program\engine</Filter>
     </ClInclude>
-    <ClInclude Include="program\engine\component\sphere_collider.h">
-      <Filter>program\engine\component</Filter>
-    </ClInclude>
     <ClInclude Include="program\engine\component\rigidbody.h">
-      <Filter>program\engine\component</Filter>
-    </ClInclude>
-    <ClInclude Include="program\engine\component\box_collider.h">
       <Filter>program\engine\component</Filter>
     </ClInclude>
     <ClInclude Include="program\engine\bullet_usage.h">
@@ -217,9 +232,6 @@
     </ClInclude>
     <ClInclude Include="program\library\vector3.h">
       <Filter>program\library</Filter>
-    </ClInclude>
-    <ClInclude Include="program\engine\component\collider.h">
-      <Filter>program\engine\component</Filter>
     </ClInclude>
     <ClInclude Include="program\game\game_scenes\scene_stage1.h">
       <Filter>program\game\game_scenes</Filter>
@@ -232,6 +244,39 @@
     </ClInclude>
     <ClInclude Include="program\engine\engine_monobehaviour.h">
       <Filter>program\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="program\engine\engine_input.h">
+      <Filter>program\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="program\game\game_components\camera_move.h">
+      <Filter>program\game\game_components</Filter>
+    </ClInclude>
+    <ClInclude Include="program\game\game_components\sword_move.h">
+      <Filter>program\game\game_components</Filter>
+    </ClInclude>
+    <ClInclude Include="program\library\lib_time.h">
+      <Filter>program\library</Filter>
+    </ClInclude>
+    <ClInclude Include="program\engine\component\auto_destroy.h">
+      <Filter>program\engine\component\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="program\engine\component\box_collider.h">
+      <Filter>program\engine\component\collider</Filter>
+    </ClInclude>
+    <ClInclude Include="program\engine\component\capsule_collider.h">
+      <Filter>program\engine\component\collider</Filter>
+    </ClInclude>
+    <ClInclude Include="program\engine\component\collider.h">
+      <Filter>program\engine\component\collider</Filter>
+    </ClInclude>
+    <ClInclude Include="program\engine\component\sphere_collider.h">
+      <Filter>program\engine\component\collider</Filter>
+    </ClInclude>
+    <ClInclude Include="program\game\game_components\character_action.h">
+      <Filter>program\game\game_components</Filter>
+    </ClInclude>
+    <ClInclude Include="program\engine\component\image.h">
+      <Filter>program\engine\component</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

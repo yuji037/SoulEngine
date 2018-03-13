@@ -1,17 +1,23 @@
 #pragma once
-//#include <time.h>
-#include <chrono>
 
-class Time {
+//#include <Windows.h>
+#include <time.h>
+//#include <chrono>
+
+class GameTime {
 private:
-	std::chrono::system_clock::time_point end1;
-	std::chrono::system_clock::time_point end2;
-	Time();
+
+	//std::chrono::system_clock::time_point end1;
+	//std::chrono::system_clock::time_point end2;
+	clock_t end1;
+	clock_t end2;
+
+	GameTime();
 
 public:
-	static Time* GetInstance();
+	static GameTime* GetInstance();
 
 	// 毎フレームの差分時間（秒）
-	float deltaTime;
+	static float deltaTime;
 	void Update();
 };

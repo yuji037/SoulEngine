@@ -43,6 +43,16 @@ public:
 
 	}
 
+	void BaseUpdate() {
+		for (auto it = gameObjectList.begin(); it != gameObjectList.end(); ) {
+			if ((*it)->shouldDelete) {
+				it = gameObjectList.erase(it);
+				continue;
+			}
+			++it;
+		}
+	}
+
 	void SetMainCameraView() {
 		mainCamera->SetCameraView();
 		mainCamera->Update();

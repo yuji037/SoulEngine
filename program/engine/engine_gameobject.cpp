@@ -6,6 +6,8 @@
 #include "engine.h"
 #include "engine_gameobject.h"
 #include "component/mesh_renderer.h"
+#include "component/image.h"
+#include "component/capsule_collider.h"
 #include "component/sphere_collider.h"
 #include "component/box_collider.h"
 
@@ -15,6 +17,8 @@
 GameObject::GameObject(){
 	Transform* _t = new Transform();
 	transform = TransformSP(_t);
+	shouldDelete = false;
+	tag = 0;
 }
 
 //GameObject::GameObject(Vector3 position)
@@ -35,16 +39,23 @@ GameObjectSP GameObject::CreatePrimitive(PrimitiveType type) {
 	
 	auto obj = GameObjectSP(new GameObject());
 	obj->this_wp = obj;
-	//auto obj = new GameObject();
 	auto meshRenderer = obj->AddComponent<MeshRenderer>();
 
 	switch (type) {
-	case Sphere: 
-		meshRenderer->mesh = RenderPolygon::CreateSphere(1);
+	case Sphere:
+		meshRenderer->mesh = RenderPolygon::CreateSphere(0.5f);
 		obj->AddComponent<SphereCollider>();
+		break;
+	case Capsule:
+		meshRenderer->mesh = RenderPolygon::CreateCapsule(0.5f);
+		obj->AddComponent<CapsuleCollider>();
 		break;
 	case Quad:
 		meshRenderer->mesh = RenderPolygon::CreateQuadrangle();
+		obj->AddComponent<BoxCollider>();
+		break;
+	case Cube:
+		meshRenderer->mesh = RenderPolygon::CreateFromXFile("cube.x");
 		obj->AddComponent<BoxCollider>();
 		break;
 	}
@@ -56,5 +67,52 @@ GameObjectSP GameObject::CreatePrimitive(PrimitiveType type) {
 
 	Engine::getInstance()->project->nowScene->gameObjectList.push_back(obj);
 
+	return obj;
+}
+
+// UIi‰æ–Ê‚É2D‚Æ‚µ‚Ä“\‚è•t‚­j‚ðì‚é
+GameObjectSP GameObject::CreateUIImage(const Rect& rect) {
+
+	auto obj = GameObjectSP(new GameObject());
+	obj->this_wp = obj;
+	auto image = obj->AddComponent<Image>();
+
+	image->mesh = RenderPolygon::CreateUIImage(rect);
+
+	image->mesh->position = &obj->transform->position;
+	image->mesh->rotation = &obj->transform->rotation;
+	image->mesh->scale = &obj->transform->scale;
+
+
+	Engine::getInstance()->project->nowScene->gameObjectList.push_back(obj);
+
+	return obj;
+}
+
+// ‹ó‚ðì‚é
+GameObjectSP GameObject::CreateSkybox() {
+
+	auto obj = GameObjectSP(new GameObject());
+	obj->this_wp = obj;
+	auto meshRen = obj->AddComponent<MeshRenderer>();
+
+	meshRen->mesh = RenderPolygon::CreateSphere(300, true);
+
+	meshRen->mesh->position = &obj->transform->position;
+	meshRen->mesh->rotation = &obj->transform->rotation;
+	meshRen->mesh->scale = &obj->transform->scale;
+
+
+	Engine::getInstance()->project->nowScene->gameObjectList.push_back(obj);
+
+	return obj;
+}
+
+GameObjectSP GameObject::CreateEmptyObject() {
+
+	auto obj = GameObjectSP(new GameObject());
+	obj->this_wp = obj;
+
+	Engine::getInstance()->project->nowScene->gameObjectList.push_back(obj);
 	return obj;
 }

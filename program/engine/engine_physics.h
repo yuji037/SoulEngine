@@ -6,19 +6,19 @@
 #include <list>
 
 
-class Physics {
+class Bullet {
 
-	Physics();
+	Bullet();
 
 
 public:
 
-	~Physics();
+	~Bullet();
 
-	static Physics* getInstance() {
-		static Physics* instance = nullptr;
+	static Bullet* GetInstance() {
+		static Bullet* instance = nullptr;
 		if (instance)return instance;
-		instance = new Physics();
+		instance = new Bullet();
 		return instance;
 	}
 
@@ -30,8 +30,13 @@ public:
 	btDiscreteDynamicsWorld* dynamicsWorld;
 	btAlignedObjectArray<btCollisionShape*> collisionShapes;
 
+	btGhostPairCallback* ghostPairCallback;
+
 	std::list<Collider*> colliders;
 
 	void Init();
 	void Update();
+	void Draw();
+
+	void RemoveCollider(Collider* collider);
 };

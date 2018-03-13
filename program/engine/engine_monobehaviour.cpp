@@ -9,6 +9,6 @@ MonoBehaviour::MonoBehaviour(GameObjectWP _gameObject) :
 }
 
 void MonoBehaviour::_initOnCreate() {
-
+	// this_wp にはコンストラクタで代入できないため、あとで動的に入れる
 	Engine::getInstance()->monoBehaviourList.push_back(this_wp);
 }

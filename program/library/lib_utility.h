@@ -26,6 +26,20 @@ inline bool IsHitSphereToSphere(Vector3 center1, float r1, Vector3 center2, floa
 	return distanceSquare < rSum * rSum;
 }
 
+struct Rect {
+	float left;
+	float top;
+	float right;
+	float bottom;
+
+	Rect(float _left, float _top, float _right, float _bottom):
+		left(_left),
+		top(_top),
+		right(_right),
+		bottom(_bottom)
+	{}
+};
+
 // DirectX2D ‚Å‚ÍŽžŒv‰ñ‚è
 //inline t2k::vec3 RotateZ(t2k::vec3 vec, float angle) {
 //	//Utilities* ut = Utilities::getInstance( );

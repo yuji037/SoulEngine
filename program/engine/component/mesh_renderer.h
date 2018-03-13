@@ -1,5 +1,6 @@
 #pragma once
 #include "../engine_component.h"
+#include "../../library/lib_DXUTusage.h"
 
 class MeshRenderer;
 typedef std::shared_ptr<MeshRenderer> MeshRendererSP;
@@ -15,7 +16,5 @@ public:
 		Component(_gameObject)
 	{}
 
-	~MeshRenderer() {
-		int a = 0;
-	}
+	~MeshRenderer();
 };

@@ -108,7 +108,8 @@ void CALLBACK OnD3D9FrameRender(IDirect3DDevice9* pd3dDevice, double fTime, floa
 	// ポリゴンリストの描画
 	RenderPolygonManager::getInstance()->RenderPolygons();
 
-	//t2k::Support::renderString(10, 10, "テスト");
+	t2k::Support::renderString(10, 10, "テスト");
+	Engine::getInstance()->Draw();
 }
 
 
@@ -140,18 +141,17 @@ void CALLBACK OnD3D9DestroyDevice(void* pUserContext)
 	// カメラの解放
 	//ReleaseCamera();
 
-
 	// テクスチャリストの解放
 	ReleaseTexture();
-
-	//GameManager* gm = GameManager::GetInstance();
-	//SAFE_DELETE(gm);
 
 	Engine* engine = Engine::getInstance();
 	SAFE_DELETE(engine);
 
-	Physics* physics = Physics::getInstance();
+	Bullet* physics = Bullet::GetInstance();
 	SAFE_DELETE(physics);
+
+	GameTime* gameTime = GameTime::GetInstance();
+	SAFE_DELETE(gameTime);
 
 
 	// ポリゴンリストの解放
@@ -192,7 +192,7 @@ INT WINAPI wWinMain(HINSTANCE, HINSTANCE, LPWSTR, int)
 	DXUTSetHotkeyHandling(true, true, true);  // handle the default hotkeys
 	DXUTSetCursorSettings(true, true); // Show the cursor and clip it when in full screen
 	DXUTCreateWindow(L"EmptyProject");
-	DXUTCreateDevice(true, 1200, 900);
+	DXUTCreateDevice(true, WINDOW_WIDTH, WINDOW_HEIGHT);
 
 	// Start the render loop
 	DXUTMainLoop();

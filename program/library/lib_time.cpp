@@ -1,26 +1,30 @@
 #include "DXUT.h"
 #include "lib_time.h"
 
-Time::Time() {
-	end1 = std::chrono::system_clock::now();
-	end2 = std::chrono::system_clock::now();
+float GameTime::deltaTime = 0.f;
+
+GameTime::GameTime() {
+	end1 = clock();
+	end2 = clock();
+
+	// 乱数生成（便利機能）のため
+	srand(time(NULL));
 }
 
-Time* Time::GetInstance() {
-	static Time* instance = nullptr;
+GameTime* GameTime::GetInstance() {
+	static GameTime* instance = nullptr;
 	if (instance)return instance;
-	instance = new Time();
+	instance = new GameTime();
 	return instance;
 }
 
-void Time::Update() {
-	end2 = std::chrono::system_clock::now();
-	auto delta = end2 - end1;
+void GameTime::Update() {
+	end2 = clock();
 
-	long long deltaMilli = std::chrono::duration_cast<std::chrono::milliseconds>(delta).count();
+	double deltaMilli = end2 - end1;
 	deltaTime = (float)deltaMilli * 0.001f;
 	
-	end1 = std::chrono::system_clock::now();
+	end1 = clock();
 
 	// ゲーム非アクティブになったりなど0.3秒以上の放置ではカウントしない
 	if (deltaTime > 0.3f) {

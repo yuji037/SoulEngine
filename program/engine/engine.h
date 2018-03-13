@@ -2,7 +2,7 @@
 #include "engine_physics.h"
 #include "project.h"
 #include "engine_monobehaviour.h"
-
+#include "../library/lib_time.h"
 
 
 class Engine {
@@ -15,6 +15,9 @@ public:
 	ProjectSP project;
 	std::vector<Component*> componentList;
 	std::vector<ComponentWP> monoBehaviourList;
+
+	// ゲーム中に生成したcomponentの初期化用リスト
+	std::list<Component*> initComponentList;
 
 	static Engine* getInstance() {
 		static Engine* instance = nullptr;
@@ -30,26 +33,35 @@ public:
 		// オブジェクトの生成
 		project->Init();
 		
-		// オブジェクト生成時の初期化
-		for (auto it = componentList.begin(); it != componentList.end(); ++it) {
-			(*it)->_initOnCreate();
-		}
-		Physics::getInstance()->Init();
+		Bullet::GetInstance()->Init();
 
-		// Game側の初期化
-		for (auto it = monoBehaviourList.begin(); it != monoBehaviourList.end(); ++it) {
-			it->lock()->Start();
-		}
 	}
 
 	void Update() {
 
+		// 生成時初期化とユーザー定義初期化
+		for (auto it = initComponentList.begin(); it != initComponentList.end(); ) {
+			(*it)->_initOnCreate();
+			(*it)->Start();
+			it = initComponentList.erase(it);
+		}
+
 		project->Update();
 
-		Physics::getInstance()->Update();
+		Bullet::GetInstance()->Update();
 
-		for (auto it = monoBehaviourList.begin(); it != monoBehaviourList.end(); ++it) {
+		for (auto it = monoBehaviourList.begin(); it != monoBehaviourList.end(); ) {
+			if ((*it).expired()) {
+				it = monoBehaviourList.erase(it);
+				continue;
+			}
 			it->lock()->Update();
+			++it;
 		}
+		GameTime::GetInstance()->Update();
+	}
+
+	void Draw() {
+		Bullet::GetInstance()->Draw();
 	}
 };

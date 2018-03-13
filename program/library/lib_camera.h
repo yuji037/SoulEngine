@@ -6,10 +6,14 @@ class Camera;
 typedef std::shared_ptr< Camera > CameraSP;
 typedef std::weak_ptr< Camera > CameraWP;
 
+static const int WINDOW_WIDTH = 1200;
+static const int WINDOW_HEIGHT = 900;
+
 // ÉJÉÅÉâÉNÉâÉX
 class Camera
 {
 public:
+
 
 	enum ControlType {
 		TYPE_FREE,
@@ -18,7 +22,7 @@ public:
 
 	Camera() :
 		m_fov(45),
-		m_asp(800.0f / 600.0f),
+		m_asp((float)WINDOW_WIDTH / (float)WINDOW_HEIGHT),
 		m_near(1.0f),
 		m_far(10000.0f),
 		m_pos(0, 0, -100),

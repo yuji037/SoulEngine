@@ -3,11 +3,14 @@
 #include "engine_transform.h"
 #include "btBulletDynamicsCommon.h"
 #include <list>
+#include <vector>
 
 class GameObject;
 typedef std::shared_ptr<GameObject> GameObjectSP;
 typedef std::weak_ptr<GameObject> GameObjectWP;
 typedef std::list<ComponentSP> ComponentList;
+
+struct Rect;
 
 enum PrimitiveType {
 	Sphere,
@@ -24,12 +27,16 @@ public:
 	GameObjectWP this_wp;
 	TransformSP transform;
 	ComponentList componentList;
+	bool shouldDelete;
+	int tag;
 	
 	GameObject();
-	//GameObject(Vector3 position);
 	~GameObject();
 	
 	static GameObjectSP CreatePrimitive(PrimitiveType type);
+	static GameObjectSP CreateUIImage(const Rect& rect);
+	static GameObjectSP CreateSkybox();
+	static GameObjectSP CreateEmptyObject();
 
 	template<typename T>
 	std::shared_ptr<T> AddComponent() {
@@ -40,19 +47,35 @@ public:
 		return component;
 	}
 
-	template<typename TG>
-	/*std::shared_ptr<Component>*/TG* GetComponent() {
+	template<typename T>
+	T* GetComponent() {
 		auto it = componentList.begin();
 
 		while (it != componentList.end()) {
 			
-			if (typeid(TG) == typeid(*(*it).get())) {
-				return dynamic_cast<TG*>((*it).get());
-			}
+			auto x = dynamic_cast<T*>((*it).get());
+			if (x != nullptr) { return x; }
 			it++;
 		}
 
 		return nullptr;
+	}
+
+	template<typename T>
+	std::vector<T*> GetComponents() {
+		std::vector<T*> vector;
+		auto it = componentList.begin();
+
+		while (it != componentList.end()) {
+
+			auto x = dynamic_cast<T*>((*it).get());
+			if (x != nullptr) { 
+				vector.push_back(x);
+			}
+			it++;
+		}
+
+		return vector;
 	}
 };
 

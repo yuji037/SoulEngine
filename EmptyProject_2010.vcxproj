@@ -398,17 +398,22 @@
   <ItemGroup>
     <ClCompile Include="DXUT\Optional\SDKsound.cpp" />
     <ClCompile Include="DXUT\Optional\SDKwavefile.cpp" />
+    <ClCompile Include="program\engine\component\auto_destroy.cpp" />
     <ClCompile Include="program\engine\component\collider.cpp" />
-    <ClCompile Include="program\engine\component\sphere_collider.cpp" />
+    <ClCompile Include="program\engine\component\image.cpp" />
+    <ClCompile Include="program\engine\component\mesh_renderer.cpp" />
     <ClCompile Include="program\engine\engine_component.cpp" />
     <ClCompile Include="program\engine\engine_gameobject.cpp" />
     <ClCompile Include="program\engine\engine_monobehaviour.cpp" />
     <ClCompile Include="program\engine\engine_physics.cpp" />
+    <ClCompile Include="program\game\game_components\camera_move.cpp" />
     <ClCompile Include="program\game\game_components\player_move.cpp" />
+    <ClCompile Include="program\game\game_components\sword_move.cpp" />
     <ClCompile Include="program\game\game_scenes\scene_stage1.cpp" />
     <ClCompile Include="program\library\lib_camera.cpp" />
     <ClCompile Include="program\library\lib_render_polygon.cpp" />
     <ClCompile Include="program\library\lib_texture.cpp" />
+    <ClCompile Include="program\library\lib_time.cpp" />
     <ClCompile Include="program\library\vector3.cpp" />
     <ClCompile Include="program\support\DebugTrace.cpp" />
     <ClCompile Include="program\support\t2k_support.cpp">
@@ -423,21 +428,28 @@
     <ClInclude Include="DXUT\Optional\SDKwavefile.h" />
     <ClInclude Include="EmptyProject.h" />
     <ClInclude Include="program\engine\bullet_usage.h" />
+    <ClInclude Include="program\engine\component\auto_destroy.h" />
     <ClInclude Include="program\engine\component\box_collider.h" />
+    <ClInclude Include="program\engine\component\capsule_collider.h" />
     <ClInclude Include="program\engine\component\collider.h" />
+    <ClInclude Include="program\engine\component\image.h" />
     <ClInclude Include="program\engine\component\mesh_renderer.h" />
     <ClInclude Include="program\engine\component\rigidbody.h" />
     <ClInclude Include="program\engine\component\sphere_collider.h" />
     <ClInclude Include="program\engine\engine.h" />
     <ClInclude Include="program\engine\engine_component.h" />
     <ClInclude Include="program\engine\engine_gameobject.h" />
+    <ClInclude Include="program\engine\engine_input.h" />
     <ClInclude Include="program\engine\engine_monobehaviour.h" />
     <ClInclude Include="program\engine\engine_physics.h" />
     <ClInclude Include="program\engine\engine_scene.h" />
     <ClInclude Include="program\engine\engine_transform.h" />
     <ClInclude Include="program\engine\project.h" />
     <ClInclude Include="program\engine\SoulEngine.h" />
+    <ClInclude Include="program\game\game_components\camera_move.h" />
+    <ClInclude Include="program\game\game_components\character_action.h" />
     <ClInclude Include="program\game\game_components\player_move.h" />
+    <ClInclude Include="program\game\game_components\sword_move.h" />
     <ClInclude Include="program\game\game_scenes\scene_stage1.h" />
     <ClInclude Include="program\library\lib_camera.h" />
     <ClInclude Include="program\library\lib_DXUTusage.h" />
@@ -478,6 +490,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="program\library\lib_texture.h" />
+    <ClInclude Include="program\library\lib_time.h" />
     <ClInclude Include="program\library\lib_utility.h" />
     <ClInclude Include="program\library\vector3.h" />
     <ClInclude Include="program\support\DebugTrace.h" />

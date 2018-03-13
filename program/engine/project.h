@@ -11,6 +11,8 @@ class Project {
 
 
 public:
+
+
 	SceneList sceneList;
 	SceneSP nowScene;
 	Project() {
@@ -37,6 +39,7 @@ public:
 
 	void Update() {
 		nowScene->Update();
+		nowScene->BaseUpdate();
 		nowScene->SetMainCameraView();
 	}
 };

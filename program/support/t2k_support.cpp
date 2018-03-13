@@ -131,7 +131,7 @@ namespace t2k {
 		va_list argptr;
 
 		va_start(argptr, _str) ;
-		//vsprintf(buff, _str, argptr) ;
+		vsprintf(buff, _str, argptr) ;
 		va_end(argptr) ;
 
 		toWideChar(w_buff, buff, 255) ;
@@ -149,7 +149,7 @@ namespace t2k {
 		va_list argptr;
 
 		va_start(argptr, _str) ;
-		//vsprintf(buff, _str, argptr) ;
+		vsprintf(buff, _str, argptr) ;
 		va_end(argptr) ;
 
 		toWideChar(w_buff, buff, 255) ;
